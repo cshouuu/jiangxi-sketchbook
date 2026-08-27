@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>赣鄱山水｜江西旅行画册</title>
-<meta name="description" content="一本可以翻页、缩放和用放大镜探索的江西水彩旅行画册，收录滕王阁、庐山、景德镇、婺源、三清山等九处代表性风景。">
+<meta name="description" content="一本可以翻页、缩放和用放大镜探索的江西水彩旅行画册，收录滕王阁、庐山、鄱阳湖、景德镇、三清山等十五处代表性风景。">
 <meta name="theme-color" content="#ece7dc">
 <meta property="og:title" content="赣鄱山水｜江西旅行画册">
-<meta property="og:description" content="翻开九处风景，沿赣江与群山读一册江西。">
+<meta property="og:description" content="翻开十五处风景，沿赣江、鄱阳湖与群山读一册江西。">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_CN">
 <meta name="twitter:card" content="summary">
@@ -454,7 +454,7 @@ button{font:inherit}
     <img class="botany l" src="sketchbook/botany-left.png" alt="" aria-hidden="true">
     <img class="botany r" src="sketchbook/botany-right.png" alt="" aria-hidden="true">
 
-    <p class="hero-kicker">九处风景 · 一册江西</p>
+    <p class="hero-kicker">十五处风景 · 一册江西</p>
 
     <div class="sb-wrap" id="sbWrap">
       <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -503,8 +503,8 @@ button{font:inherit}
   <section id="about" class="about">
     <div>
       <p class="section-label">江西</p>
-      <p class="bio">赣江纵贯南北，鄱阳湖承接百川。江西既有庐山、三清山与龙虎山的奇峰云海，也有景德镇的窑火、婺源的村落、赣州的宋城与井冈山的层峦。</p>
-      <p class="bio">这本画册选取九处代表性景观，以钢笔线稿和淡彩水色重新描绘。拖动书页旅行，再移动放大镜，看看山石、屋瓦与水面留下的细节。</p>
+      <p class="bio">赣江纵贯南北，鄱阳湖承接百川。江西既有庐山、三清山与明月山的奇峰云海，也有景德镇的窑火、白鹿洞的书声、流坑的村落与瑞金的红色记忆。</p>
+      <p class="bio">这本画册选取十五处代表性景观，以钢笔线稿和淡彩水色重新描绘。拖动书页旅行，再移动放大镜，看看山石、屋瓦、飞鸟与水面留下的细节。</p>
     </div>
     <img class="bloom" src="sketchbook/bloom.png" alt="" aria-hidden="true">
   </section>
@@ -512,7 +512,7 @@ button{font:inherit}
   <div class="rule short" aria-hidden="true"></div>
 
   <section id="plates" class="plates">
-    <p class="section-label">九处风景</p>
+    <p class="section-label">十五处风景</p>
     <ol class="plate-list" id="plateList"></ol>
   </section>
 
@@ -538,15 +538,21 @@ button{font:inherit}
 const Q=new URLSearchParams(location.search);
 const DIR='sketchbook/';
 const PAGES=[
-  {file:'tengwang-pavilion.webp',          title:'滕王阁',      place:'南昌'},
-  {file:'lushan.webp',                     title:'庐山',        place:'九江'},
-  {file:'jingdezhen-imperial-kiln.webp',   title:'景德镇御窑',  place:'景德镇'},
-  {file:'wuyuan-huangling.webp',           title:'婺源篁岭',    place:'上饶'},
-  {file:'sanqingshan.webp',                title:'三清山',      place:'上饶'},
-  {file:'longhushan.webp',                 title:'龙虎山',      place:'鹰潭'},
-  {file:'wugongshan.webp',                 title:'武功山',      place:'萍乡'},
-  {file:'jinggangshan.webp',               title:'井冈山',      place:'吉安'},
-  {file:'ganzhou-song-city.webp',          title:'江南宋城',    place:'赣州'}
+  {file:'tengwang-pavilion.webp',          title:'滕王阁',          place:'南昌'},
+  {file:'poyang-lake.webp',                title:'鄱阳湖候鸟湿地',  place:'九江'},
+  {file:'lushan.webp',                     title:'庐山',            place:'九江'},
+  {file:'bailudong-academy.webp',          title:'白鹿洞书院',      place:'九江'},
+  {file:'jingdezhen-imperial-kiln.webp',   title:'景德镇御窑',      place:'景德镇'},
+  {file:'wuyuan-huangling.webp',           title:'婺源篁岭',        place:'上饶'},
+  {file:'sanqingshan.webp',                title:'三清山',          place:'上饶'},
+  {file:'longhushan.webp',                 title:'龙虎山',          place:'鹰潭'},
+  {file:'mingyue-mountain.webp',           title:'明月山',          place:'宜春'},
+  {file:'wugongshan.webp',                 title:'武功山',          place:'萍乡'},
+  {file:'xiannu-lake.webp',                title:'仙女湖',          place:'新余'},
+  {file:'jinggangshan.webp',               title:'井冈山',          place:'吉安'},
+  {file:'liukeng-village.webp',            title:'流坑古村',        place:'抚州'},
+  {file:'ganzhou-song-city.webp',          title:'江南宋城',        place:'赣州'},
+  {file:'ruijin-republic-cradle.webp',     title:'共和国摇篮',      place:'瑞金'}
 ];
 PAGES.forEach(p=>p.url=DIR+p.file);
 const M=PAGES.length, LAND=0;
