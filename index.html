@@ -1,10 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Meng To</title>
-<meta name="description" content="designer, creator, AI educator — Singapore">
+<title>赣鄱山水｜江西旅行画册</title>
+<meta name="description" content="一本可以翻页、缩放和用放大镜探索的江西水彩旅行画册，收录滕王阁、庐山、景德镇、婺源、三清山等九处代表性风景。">
+<meta name="theme-color" content="#ece7dc">
+<meta property="og:title" content="赣鄱山水｜江西旅行画册">
+<meta property="og:description" content="翻开九处风景，沿赣江与群山读一册江西。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
 <style>
 @font-face{font-family:'Instrument Serif';font-style:normal;font-weight:400;font-display:block;
   src:url(sketchbook/instrument-serif.woff2) format('woff2')}
@@ -20,8 +26,9 @@
   --ink-faint:rgba(43,39,33,.36);
   --hairline:rgba(43,39,33,.14);
   --earth:#9a6a3e;
-  --display:'Instrument Serif',"New York",Georgia,'Times New Roman',serif;
-  --font:'Newsreader',"New York",Georgia,'Times New Roman',serif;
+  --cjk:"Songti SC","Noto Serif CJK SC","Source Han Serif SC",STSong,SimSun,serif;
+  --display:'Instrument Serif',var(--cjk);
+  --font:'Newsreader',var(--cjk);
   --track-caps:.24em;
   --track-nav:.06em;
 }
@@ -431,20 +438,15 @@ button{font:inherit}
 </head>
 <body>
 <div class="wash" aria-hidden="true"></div>
-<main class="page home">
+<main class="page home" id="top">
 
   <header class="top">
-    <a class="name" href="#">Meng To</a>
-    <nav>
-      <a href="#plates">Journal</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <div class="top-socials">
-        <a href="https://x.com/MengTo" target="_blank" rel="me noopener" class="icon-btn" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.7 2.6h3.3l-7.2 8.2 8.5 11.2h-6.7l-5.2-6.9-6 6.9H1.1l7.7-8.8L.7 2.6h6.9l4.7 6.3 5.4-6.3Zm-1.2 17.5h1.8L7.6 4.4H5.7l10.8 15.7Z"/></svg></a>
-        <a href="https://www.linkedin.com/in/mengto" target="_blank" rel="me noopener" class="icon-btn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.9 3.5a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2ZM3.1 9.3h3.6v11.6H3.1V9.3Zm6 0h3.4v1.6h.05c.48-.9 1.65-1.85 3.4-1.85 3.63 0 4.3 2.35 4.3 5.4v6.45h-3.6v-5.72c0-1.36-.02-3.12-1.92-3.12-1.92 0-2.22 1.48-2.22 3.02v5.82H9.1V9.3Z"/></svg></a>
-        <a href="https://www.instagram.com/mengto" target="_blank" rel="me noopener" class="icon-btn" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5.4"/><circle cx="12" cy="12" r="4.4"/><circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/></svg></a>
-        <a href="mailto:meng@designcode.io" class="icon-btn" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.4" y="4.6" width="19.2" height="14.8" rx="2.4"/><path d="m3.2 6.4 8.8 6.6 8.8-6.6"/></svg></a>
-      </div>
+    <a class="name" href="#top">赣鄱山水</a>
+    <nav aria-label="主导航">
+      <a href="#sketchbook">画册</a>
+      <a href="#about">江西</a>
+      <a href="#plates">景点</a>
+      <a href="#credits">说明</a>
     </nav>
   </header>
 
@@ -452,7 +454,7 @@ button{font:inherit}
     <img class="botany l" src="sketchbook/botany-left.png" alt="" aria-hidden="true">
     <img class="botany r" src="sketchbook/botany-right.png" alt="" aria-hidden="true">
 
-    <p class="hero-kicker">Designer / Creator / AI Educator / Founder @ Singapore</p>
+    <p class="hero-kicker">九处风景 · 一册江西</p>
 
     <div class="sb-wrap" id="sbWrap">
       <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -460,7 +462,7 @@ button{font:inherit}
         <filter id="sb-mblur-2"><feGaussianBlur stdDeviation="14 0"/></filter>
       </svg>
       <div class="sb-stage" id="sbStage">
-        <button class="sb-arrow left" id="sbLeft" aria-label="previous page">
+        <button class="sb-arrow left" id="sbLeft" aria-label="上一页">
           <svg viewBox="0 0 14 44" width="14" height="44" fill="none" aria-hidden="true"><polyline points="11,3 3,22 11,41" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div class="sb-3d" id="sb3d">
@@ -473,22 +475,22 @@ button{font:inherit}
           <div class="zoomwrap" id="zoomWrap" aria-hidden="true"><div class="zoominner" id="zoomInner"></div></div>
           <div class="loupe" id="loupe"><span class="grip"></span><span class="ring"><span class="lens" id="loupeLens"><span class="mag" id="loupeMag"></span></span></span></div>
         </div>
-        <button class="sb-arrow right" id="sbRight" aria-label="next page">
+        <button class="sb-arrow right" id="sbRight" aria-label="下一页">
           <svg viewBox="0 0 14 44" width="14" height="44" fill="none" aria-hidden="true"><polyline points="3,3 11,22 3,41" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
       </div>
       <div class="sb-captions" id="sbCaptions"></div>
-      <div class="sb-tools" role="group" aria-label="view controls">
-        <button class="tool" id="zOut" aria-label="zoom out"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8.6" cy="8.6" r="5.6"/><path d="M12.8 12.8 17.4 17.4M6.2 8.6h4.8"/></svg></button>
+      <div class="sb-tools" role="group" aria-label="画册查看控制">
+        <button class="tool" id="zOut" aria-label="缩小"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8.6" cy="8.6" r="5.6"/><path d="M12.8 12.8 17.4 17.4M6.2 8.6h4.8"/></svg></button>
         <span class="zoom-read" id="zRead">100%</span>
-        <button class="tool" id="zIn" aria-label="zoom in"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8.6" cy="8.6" r="5.6"/><path d="M12.8 12.8 17.4 17.4M6.2 8.6h4.8M8.6 6.2v4.8"/></svg></button>
+        <button class="tool" id="zIn" aria-label="放大"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8.6" cy="8.6" r="5.6"/><path d="M12.8 12.8 17.4 17.4M6.2 8.6h4.8M8.6 6.2v4.8"/></svg></button>
         <span class="tool-sep" aria-hidden="true"></span>
-        <button class="tool" id="loupeBtn" aria-label="magnifier" aria-pressed="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8.8" cy="8.8" r="5.8"/><path d="M13 13l4.4 4.4"/><path d="M6.4 7.2a3.2 3.2 0 0 1 2.4-1.4" opacity=".55"/></svg></button>
+        <button class="tool" id="loupeBtn" aria-label="放大镜" aria-pressed="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8.8" cy="8.8" r="5.8"/><path d="M13 13l4.4 4.4"/><path d="M6.4 7.2a3.2 3.2 0 0 1 2.4-1.4" opacity=".55"/></svg></button>
       </div>
-      <p class="sb-hint" id="sbHint">Drag the page to turn · Drag the glass across it</p>
+      <p class="sb-hint" id="sbHint">拖动书页翻页 · 移动放大镜看细节</p>
     </div>
 
-    <button class="hero-down" id="heroDown" aria-label="scroll to about">
+    <button class="hero-down" id="heroDown" aria-label="继续阅读江西介绍">
       <svg viewBox="0 0 44 22" width="34" height="17" fill="none" aria-hidden="true">
         <polyline points="3,3 22,11 41,3" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
         <polyline points="3,11 22,19 41,11" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
@@ -500,9 +502,9 @@ button{font:inherit}
 
   <section id="about" class="about">
     <div>
-      <p class="section-label">About</p>
-      <p class="bio">Meng To is a designer and teacher in Singapore. He founded <a class="bio-link" href="https://designcode.io" target="_blank" rel="noopener">Design+Code</a>, where he teaches designers code and developers design, and builds <a class="bio-link" href="https://aura.build" target="_blank" rel="noopener">Aura</a> and <a class="bio-link" href="https://dreamcut.ai" target="_blank" rel="noopener">DreamCut</a>.</p>
-      <p class="bio">This sketchbook is the slower half of that. The city looked at properly, in ink and a little colour: shophouse shutters, hawker tents, the bay at dusk.</p>
+      <p class="section-label">江西</p>
+      <p class="bio">赣江纵贯南北，鄱阳湖承接百川。江西既有庐山、三清山与龙虎山的奇峰云海，也有景德镇的窑火、婺源的村落、赣州的宋城与井冈山的层峦。</p>
+      <p class="bio">这本画册选取九处代表性景观，以钢笔线稿和淡彩水色重新描绘。拖动书页旅行，再移动放大镜，看看山石、屋瓦与水面留下的细节。</p>
     </div>
     <img class="bloom" src="sketchbook/bloom.png" alt="" aria-hidden="true">
   </section>
@@ -510,48 +512,44 @@ button{font:inherit}
   <div class="rule short" aria-hidden="true"></div>
 
   <section id="plates" class="plates">
-    <p class="section-label">Plates</p>
+    <p class="section-label">九处风景</p>
     <ol class="plate-list" id="plateList"></ol>
   </section>
 
   <div class="rule short" aria-hidden="true"></div>
 
-  <section id="contact" class="contact">
-    <p class="section-label">Contact</p>
-    <p class="bio">Write to me at <a class="bio-link" href="mailto:meng@designcode.io">meng@designcode.io</a>. I read everything, and I answer most of it.</p>
-    <p class="contact-social">
-      <a class="bio-link" href="https://x.com/MengTo" target="_blank" rel="me noopener">X</a>
-      <a class="bio-link" href="https://www.linkedin.com/in/mengto" target="_blank" rel="me noopener">LinkedIn</a>
-      <a class="bio-link" href="https://www.instagram.com/mengto" target="_blank" rel="me noopener">Instagram</a>
-    </p>
+  <section id="credits" class="contact">
+    <p class="section-label">说明</p>
+    <p class="bio">江西版画册由 <a class="bio-link" href="https://github.com/cshouuu/jiangxi-sketchbook" target="_blank" rel="noopener">cshouuu/jiangxi-sketchbook</a> 维护，插画使用 AI 生成并经过统一构图与网页适配。</p>
+    <p class="bio">交互设计与代码改编自 <a class="bio-link" href="https://github.com/MengTo/sketchbook" target="_blank" rel="noopener">MengTo/sketchbook</a>，其概念源自 Matthew Yu 的个人作品集。</p>
   </section>
 
-  <p class="foot">Singapore · Sketchbook</p>
+  <p class="foot">江西 · 赣鄱山水画册</p>
 </main>
 
 <script>
 /* =====================================================================
-   Meng To — sketchbook hero.
-   Spreads are transparent PNGs of an open sketchbook generated with
-   Higgsfield.  The leaf that turns is a real curved surface: a chain of
+   Jiangxi travel sketchbook, adapted from MengTo/sketchbook.
+   Spreads are transparent WebP illustrations of an open sketchbook.
+   The leaf that turns is a real curved surface: a chain of
    nested strips whose tangent sweeps through an arc, so the page bends
    the way paper bends instead of pivoting like a flat door.
    ===================================================================== */
 const Q=new URLSearchParams(location.search);
 const DIR='sketchbook/';
 const PAGES=[
-  {file:'marina-bay-sands.png',   title:'Marina Bay Sands',          place:'Bayfront'},
-  {file:'gardens-by-the-bay.png', title:'Gardens by the Bay',        place:'Supertree Grove'},
-  {file:'merlion.png',            title:'The Merlion',               place:'Merlion Park'},
-  {file:'buddha-tooth.png',       title:'Buddha Tooth Relic Temple', place:'Chinatown'},
-  {file:'joo-chiat.png',          title:'Joo Chiat Shophouses',      place:'Katong'},
-  {file:'lau-pa-sat.png',         title:'Lau Pa Sat',                place:'Raffles Quay'},
-  {file:'marina-bay-skyline.png', title:'Marina Bay Skyline',        place:'The Bay'},
-  {file:'singapore-river.png',    title:'Singapore River',           place:'Boat Quay'},
-  {file:'botanic-gardens.png',    title:'Botanic Gardens',           place:'Tanglin'}
+  {file:'tengwang-pavilion.webp',          title:'滕王阁',      place:'南昌'},
+  {file:'lushan.webp',                     title:'庐山',        place:'九江'},
+  {file:'jingdezhen-imperial-kiln.webp',   title:'景德镇御窑',  place:'景德镇'},
+  {file:'wuyuan-huangling.webp',           title:'婺源篁岭',    place:'上饶'},
+  {file:'sanqingshan.webp',                title:'三清山',      place:'上饶'},
+  {file:'longhushan.webp',                 title:'龙虎山',      place:'鹰潭'},
+  {file:'wugongshan.webp',                 title:'武功山',      place:'萍乡'},
+  {file:'jinggangshan.webp',               title:'井冈山',      place:'吉安'},
+  {file:'ganzhou-song-city.webp',          title:'江南宋城',    place:'赣州'}
 ];
 PAGES.forEach(p=>p.url=DIR+p.file);
-const M=PAGES.length, LAND=6;
+const M=PAGES.length, LAND=0;
 
 const wrap=document.getElementById('sbWrap');
 const stage=document.getElementById('sbStage');
@@ -645,7 +643,7 @@ function paint(){
     applyTurn(turn.t);
   }
   const a=el('button','sb-zone sb-prev'),b=el('button','sb-zone sb-next');
-  a.setAttribute('aria-label','previous page');b.setAttribute('aria-label','next page');
+  a.setAttribute('aria-label','上一页');b.setAttribute('aria-label','下一页');
   book.appendChild(a);book.appendChild(b);
   layout();
   caption();
