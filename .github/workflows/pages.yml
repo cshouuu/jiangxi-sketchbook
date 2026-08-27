@@ -23,6 +23,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+        with:
+          # Forks do not have a Pages site until the first deployment.
+          # Let the action create it and configure GitHub Actions as the source.
+          enablement: true
       # the whole repo is the site: one html file plus sketchbook/
       - uses: actions/upload-pages-artifact@v3
         with:
